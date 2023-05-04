@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Documents</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <div class="alert-box" id="alert">
+        <p id="title">Alert 박스</p>
+<!--        <button onclick="document.getElementById('alert').style.display='none';">닫기</button> -->
+        <button id="close"> X </button> 
+    </div>
+    
+    <button onclick="알림창1열기('아이디 입력하세요')">버튼1</button>
+    <button onclick="알림창1열기('비밀번호 입력하세요')">버튼2</button>
+    
+    <script>
+        
+        document.getElementById('close').addEventListener('click', function(){   
+                                                        // 'click' 자리 <- 이벤트 라고 불림.(click, keydown, scroll, mouseover 등등)
+            document.getElementById('alert').style.display = 'none';
+        });
+        
+   
+        function 알림창1열기(A){
+            document.getElementById('title').innerHTML = A;
+            document.getElementById('alert').style.display = 'block';
+        }
+        
+        
+        function 알림창닫기(){
+            document.getElementById('alert').style.display = 'none';
+        }
+        
+//        function 알림창2열기(){
+//            document.getElementById('title').innerHTML = '비밀번호를 입력하세요';
+//            document.getElementById('alert').style.display = 'bloock';
+//        }
+        
+        
+    </script>
+    
+    
+</body>
+</html>
